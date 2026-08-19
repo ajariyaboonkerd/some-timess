@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some times | Vintage & Bangle Watches Under ฿600</title>
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mint-primary: #81B29A;
+            --mint-light: #E8F3EE;
+            --mint-accent: #A3C9B8;
+            --brown-dark: #3D2B1F;
+            --brown-main: #6F4E37;
+            --brown-light: #C4A482;
+            --bg-cream: #FAF7F2;
+            --white: #FFFFFF;
+            --text-main: #2C221E;
+            --shadow: 0 10px 30px rgba(61, 43, 31, 0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(111, 78, 55, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--brown-dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--mint-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--mint-primary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: linear-gradient(135deg, var(--mint-light) 0%, #F3EDE2 100%);
+            border-radius: calc(var(--radius) * 1.5);
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            color: var(--brown-dark);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--brown-main);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--brown-dark);
+            color: var(--mint-light);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--brown-dark);
+            color: var(--white);
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(61, 43, 31, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--mint-primary);
+            color: var(--brown-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 2px solid var(--mint-accent);
+        }
+
+        .hero-card .price-tag {
+            font-size: 2.2rem;
+            color: var(--mint-primary);
+            font-weight: 600;
+        }
+
+        /* --- Products Section --- */
+        .section-title {
+            text-align: center;
+            margin: 5rem 0 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--brown-dark);
+        }
+
+        .section-title p {
+            color: var(--brown-main);
+            font-weight: 300;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(61, 43, 31, 0.12);
+        }
+
+        .product-thumb {
+            width: 100%;
+            height: 240px;
+            background-color: var(--mint-light);
+            border-radius: calc(var(--radius) - 4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+        }
+
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-thumb img {
+            transform: scale(1.05);
+        }
+
+        .product-title {
+            font-size: 1.15rem;
+            color: var(--brown-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(111, 78, 55, 0.15);
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--brown-dark);
+        }
+
+        .btn-sm {
+            background-color: var(--mint-light);
+            color: var(--brown-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-sm:hover {
+            background-color: var(--mint-primary);
+            color: var(--white);
+        }
+
+        /* --- Social Contact Section --- */
+        .contact-section {
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--mint-light) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-radius: calc(var(--radius) * 2) calc(var(--radius) * 2) 0 0;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .social-card {
+            background: var(--white);
+            padding: 1.8rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--mint-primary);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .line-bg { background-color: #06C755; }
+        .tiktok-bg { background-color: #000000; }
+        .ig-bg { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+        .social-card h3 {
+            font-size: 1.1rem;
+            color: var(--brown-dark);
+        }
+
+        .social-card p {
+            font-size: 0.85rem;
+            color: var(--brown-main);
+            font-weight: 300;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--brown-dark);
+            color: var(--mint-light);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-weight: 300;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 2.5rem 1.5rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">some <span>times.</span></a>
+            <ul class="nav-links">
+                <li><a href="#products">นาฬิกาทั้งหมด</a></li>
+                <li><a href="#contact">ช่องทางการสั่งซื้อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="badge">ดีไซน์วินเทจ & กำไลเงิน ไม่เกิน ฿600</span>
+            <h1>ความสวยงามข้ามเวลา บนข้อมือของคุณ</h1>
+            <p>นาฬิกาวินเทจและดีไซน์กำไลเงิน สไตล์ Unique ไม่ซ้ำใคร คุมโทนขับผิวอย่างลงตัว ในราคาจับต้องได้ง่ายๆ</p>
+            <a href="#products" class="btn-primary">เลือกชมสินค้า</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-card">
+                <p style="color: var(--brown-main); font-size: 0.9rem; margin-bottom: 0.5rem;">RECOMMENDED</p>
+                <h3 style="color: var(--brown-dark); font-size: 1.4rem; margin-bottom: 0.5rem;">Vivienne Soft Pink Bangle</h3>
+                <div class="price-tag">฿590</div>
+                <p style="color: #666; font-size: 0.85rem; margin-top: 0.5rem;">กำไลเงินฉลุลาย สไตล์สตรีทหรูหรา หน้าปัดสีชมพูอ่อน</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="section-title">
+            <h2>FEATURED COLLECTION</h2>
+            <p>นาฬิกากำไลวินเทจ สไตล์ที่เป็นเอกลักษณ์ ราคาไม่เกิน ฿600</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Item 1 -->
+            <div class="product-card">
+                <div class="product-thumb">
+                    <!-- ใส่รูปภาพจริงแทนที่ image.png ได้ครับ -->
+                    <img src="image.png" alt="Leclei Oval Bangle Watch">
+                </div>
+                <h3 class="product-title">Leclei Oval Bangle</h3>
+                <p class="product-desc">เรือนเงินทรงรี หน้าปัดทูโทนขาวดำ สไตล์มินิมอลวินเทจ</p>
+                <div class="product-footer">
+                    <span class="price">฿490</span>
+                    <a href="#contact" class="btn-sm">สั่งซื้อ</a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="product-card">
+                <div class="product-thumb">
+                    <!-- ใส่รูปภาพจริงแทนที่ image_2.png ได้ครับ -->
+                    <img src="image_2.png" alt="Hammered Silver Cuff Watch">
+                </div>
+                <h3 class="product-title">Hammered Silver Cuff</h3>
+                <p class="product-desc">กำไลเงินตอกลายทรงกว้าง พร้อมลวดลายฉลุวินเทจสุดเก๋</p>
+                <div class="product-footer">
+                    <span class="price">฿550</span>
+                    <a href="#contact" class="btn-sm">สั่งซื้อ</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="product-card">
+                <div class="product-thumb">
+                    <!-- ใส่รูปภาพจริงแทนที่ image_3.png ได้ครับ -->
+                    <img src="image_3.png" alt="Leclei Tear-Drop Charm Watch">
+                </div>
+                <h3 class="product-title">Leclei Tear-Drop</h3>
+                <p class="product-desc">ทรงหยดน้ำประดับเพชร แมตช์กับสายเลสสไตล์อิตาลี</p>
+                <div class="product-footer">
+                    <span class="price">฿490</span>
+                    <a href="#contact" class="btn-sm">สั่งซื้อ</a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="product-card">
+                <div class="product-thumb">
+                    <!-- ใส่รูปภาพจริงแทนที่ image_4.png ได้ครับ -->
+                    <img src="image_4.png" alt="Vivienne Engraved Pink Watch">
+                </div>
+                <h3 class="product-title">Vivienne Engraved Pink</h3>
+                <p class="product-desc">กำไลเงินสลักลายกุหลาบ หน้าปัดสีชมพูพาสเทลยอดฮิต</p>
+                <div class="product-footer">
+                    <span class="price">฿590</span>
+                    <a href="#contact" class="btn-sm">สั่งซื้อ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-title" style="margin: 0 0 1rem 0;">
+                <h2>CONNECT WITH US</h2>
+                <p>สอบถามรายละเอียดเพิ่มเติม ดูรีวิวคลิปสั้น หรือสั่งซื้อได้ทุกช่องทาง</p>
+            </div>
+
+            <div class="social-grid">
+                <!-- LINE -->
+                <a href="https://line.me" target="_blank" class="social-card">
+                    <div class="social-icon line-bg">
+                        <!-- SVG Line Icon -->
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63h-2.425v1.145h2.425c.349 0 .63.282.63.63 0 .349-.281.63-.63.63h-3.055c-.167 0-.327-.067-.445-.184a.628.628 0 0 1-.183-.446V9.233c0-.348.281-.63.63-.63h3.055c.349 0 .63.282.63.63 0 .348-.281.63-.63.63h-2.425v1.002h2.425zm-6.786 3.036c0 .245-.141.468-.36.575a.626.626 0 0 1-.271.062.624.624 0 0 1-.445-.184l-2.235-2.357v1.898c0 .348-.282.63-.63.63a.627.627 0 0 1-.63-.63V9.233c0-.244.14-.468.36-.574a.623.623 0 0 1 .716.122l2.234 2.357V9.233c0-.348.282-.63.63-.63s.63.282.63.63v3.666zm-5.074 0c0 .348-.282.63-.63.63a.628.628 0 0 1-.63-.63V9.233c0-.348.282-.63.63-.63s.63.282.63.63v3.666zm-2.82 0c0 .348-.282.63-.63.63H1.008c-.348 0-.63-.282-.63-.63V9.233c0-.348.282-.63.63-.63s.63.282.63.63v3.035h2.424c.349 0 .63.283.63.631zM12 2C6.477 2 2 5.789 2 10.463c0 4.182 3.555 7.683 8.358 8.337.325.07.768.216.88.495.1.25.065.642.03.896-.051.371-.237 1.451-.262 1.762-.038.472.218.463.458.307.32-.208 4.312-2.585 5.89-4.417C19.53 15.86 22 13.398 22 10.463 22 5.789 17.523 2 12 2z"/></svg>
+                    </div>
+                    <h3>LINE Official</h3>
+                    <p>@sometimes.watch</p>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://tiktok.com" target="_blank" class="social-card">
+                    <div class="social-icon tiktok-bg">
+                        <!-- SVG TikTok Icon -->
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.37a6.33 6.33 0 0 0-1-.08A6.26 6.26 0 0 0 3 15.55a6.26 6.26 0 0 0 10.15 4.88 6.2 6.2 0 0 0 2.19-4.66V8.69a8.17 8.17 0 0 0 4.25 1.45V6.69z"/></svg>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>@sometimes_watch</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" class="social-card">
+                    <div class="social-icon ig-bg">
+                        <!-- SVG Instagram Icon -->
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@sometimes.official</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>some times</strong> watch store. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Vintage & Bangle Timepieces Under ฿600</p>
+    </footer>
+
+</body>
+</html>
